@@ -61,28 +61,61 @@
       <ul>
         <li><a href="#">首页</a></li>
         <li><a href="#">文章</a></li>
-        <li><a href="#">关于我</a></li>
-        <li><a href="#">联系我</a></li>
+        <li><a href="friendlink.html">友情链接</a></li>
+        <li><a href="contact.html">联系我</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <article>
-      <h2>第一篇博客文章</h2>
-      <p>这是文章的内容。在这里，你可以分享你的想法、经验和故事。</p>
-      <img src="your_image.jpg" alt="描述图片的内容" width="300">
-      <p>可以插入图片、链接等元素，让文章更加丰富</p>
+      <h2>本博客托管在GitHub Pages上，使用CloudflareDNS加速，html+css</h2>
+      <p>本站域名：awa.pw</p>
+      <p>域名于2024年10月20日在易名（<a href="https://ename.net">ename.net</a>）注册</p>
+    </article>
+    
+    <article>
+      <h2>随机一言：</h2>
+      <h4 class="hitokoto" id="yiyancon"></h4> <script type="text/javascript" src="https://international.v1.hitokoto.cn?encode=js&amp;charset=utf-8&amp;&amp;c=j&amp;c=k&amp;c=l"></script>
     </article>
 
     <article>
-      <h2>第二篇博客文章</h2>
-      <p>随便写写吧</p>
+      <h2>我的主要个人博客</h2>
+      <p>地址：<a href="https://xlbzi.cn">xlbzi.cn</a></p>
     </article>
   </main>
 
   <footer>
-    <p>版权所有©2024小林 保留所有权利</p>
+    <span id="site-time"></span>
+<script>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000
+        var minutes = seconds * 60
+        var hours = minutes * 60
+        var days = hours * 24
+        var years = days * 365
+        var today = new Date()
+        var todayYear = today.getFullYear()
+        var todayMonth = today.getMonth()
+        var todayDate = today.getDate()
+        var todayHour = today.getHours()
+        var todayMinute = today.getMinutes()
+        var todaySecond = today.getSeconds()
+        var t1 = Date.UTC(2024, 10, 10, 0, 0, 0)
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond)
+        var diff = t2 - t1
+        var diffYears = Math.floor(diff / years)
+        var diffDays = Math.floor((diff / days) - diffYears * 365)
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours)
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes)
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds)
+        document.getElementById("site-time").innerHTML = "网站已运行："
+            + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒"
+    }
+    siteTime()  
+</script>
+    <p>版权所有© 2024小林的个人博客 保留所有权利</p>
   </footer>
 </body>
 </html>
