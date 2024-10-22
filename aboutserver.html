@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .circle-image {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    article {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+  <title>小林的个人博客</title>
+</head>
+
+<body>
+  <header>
+    <img src="https://xlbzi.cn/Image.jpg" alt="小林头像" class="circle-image">
+    <h1>文章详情</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="menu.html">文章</a></li>
+        <li><a href="friendlink.html">友情链接</a></li>
+        <li><a href="contact.html">联系我</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>关于运行网站的服务器</h2>
+	  <p>
+运行这个网站的服务器是阿里云</br>
+</br>
+<h2># 网站的服务器配置:</h2></br>
+CPU：Intel(R) Xeon(R) Platinum 2核心</br>
+RAM：2GiB</br>
+Disk：40GiB</br>
+带宽：10Mbps</br>
+地域：华东1（杭州）</br>
+</br>
+<h2># 操作系统和搭建环境的选择:</h2></br>
+OS: CentOS 7.9</br>
+Web Environment: 宝塔 + Typecho</br>
+</br>
+<h2># 问答</h2></br>
+问：为什么不用香港的云服务器？</br>
+答：因为服务器在国内访问的速度比香港的云服务器要快，延迟会更低。</br>
+</br>
+问：服务器在国内备案不麻烦吗？</br>
+答：现在备案已经不是很麻烦了，网站备了案能让访问者更信任你的网站。</br>
+</br>
+问：为什么不用雨云的服务器？</br>
+答：因为雨云的服务器可能会跑路，而阿里云这种大厂不会去轻易跑路的，雨云目前我还没在官网发现备案的入口，所以不考虑买。</br>
+</br>
+问：取这个域名有什么含义吗？</br>
+答：这个嘛。。。暂时还不能说😰</br>
+（但是我可以说下lyyos.cn的含义，大概是2023年胡思乱想想出的一个系统（os）就想为它搭个官网，后来不想做了，这个域名也就废弃不用了）</br>
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <span id="site-time"></span>
+<script>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000
+        var minutes = seconds * 60
+        var hours = minutes * 60
+        var days = hours * 24
+        var years = days * 365
+        var today = new Date()
+        var todayYear = today.getFullYear()
+        var todayMonth = today.getMonth()
+        var todayDate = today.getDate()
+        var todayHour = today.getHours()
+        var todayMinute = today.getMinutes()
+        var todaySecond = today.getSeconds()
+        var t1 = Date.UTC(2024, 10, 10, 0, 0, 0)
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond)
+        var diff = t2 - t1
+        var diffYears = Math.floor(diff / years)
+        var diffDays = Math.floor((diff / days) - diffYears * 365)
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours)
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes)
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds)
+        document.getElementById("site-time").innerHTML = "网站已运行："
+            + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒"
+    }
+    siteTime()  
+</script>
+    <p>版权所有© 2024小林的个人博客 保留所有权利</p>
+  </footer>
+</body>
+</html>
