@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN" class="mdui-theme-dark">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <meta name="renderer" content="webkit"/>
+    <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+    <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+    <title>Xiaolin's Blog</title>
+  </head>
+  <body>
+    <div class="example-contained" style="position: relative; overflow: hidden">
+    <mdui-navigation-drawer modal close-on-esc close-on-overlay-click>
+    <mdui-button-icon class="close"><mdui-icon src="../mdui-svg/close.svg"></mdui-icon></mdui-button-icon><br/>
+    <mdui-list>
+      <mdui-list-item rounded href="index.html">首页</mdui-list-item>
+      <mdui-list-item rounded href="word.html">文章</mdui-list-item>
+      <mdui-list-item rounded href="friendlink.html">友情链接</mdui-list-item>
+      <mdui-list-item rounded href="contact.html">联系我</mdui-list-item>
+    </mdui-list>
+    </mdui-navigation-drawer>
+    <div>
+      <mdui-top-app-bar>
+          	<mdui-button-icon class="open"><mdui-icon src="../mdui-svg/menu.svg"></mdui-icon></mdui-button-icon>
+            <mdui-top-app-bar-title>Xiaolin's Blog</mdui-top-app-bar-title>
+            <div style="flex-grow: 1"></div>
+            <mdui-dropdown>
+                <mdui-button-icon slot="trigger"><mdui-icon src="../mdui-svg/weather-sunny.svg"></mdui-icon></mdui-button-icon
+                  <mdui-menu>
+                    <mdui-menu-item href="../index.html">浅色模式</mdui-menu-item>
+                    <mdui-menu-item href="index.html">深色模式</mdui-menu-item>
+                    <mdui-divider inset></mdui-divider>
+                    <mdui-menu-item href="../auto/index.html">跟随系统切换</mdui-menu-item>
+                  </mdui-menu>
+              </mdui-dropdown>
+              <mdui-dropdown>
+                <mdui-button-icon slot="trigger"><mdui-icon src="../mdui-svg/dots-vertical.svg"></mdui-icon></mdui-button-icon
+                  <mdui-menu>
+                      <mdui-card style="width: 220px;height: 220px" clickable><h3>关于此界面</h3><p>此页面全部代码由小林编写，使用了MDUI2框架，作者稍后会部署在自己的二号博客上（awa.pw）</p><mdui-button href="https://xlbzi.cn" target="_blank" variant="tonal">小林的博客</mdui-button></mdui-card>
+                    </mdui-tooltip>
+                  </mdui-menu>
+              </mdui-dropdown>
+      </mdui-top-app-bar>
+    </div>
+  </div>
+  <script>
+    const example = document.querySelector(".example-contained");
+    const navigationDrawer = example.querySelector("mdui-navigation-drawer");
+    const openButton = example.querySelector(".open");
+    const closeButton = example.querySelector(".close");
+    openButton.addEventListener("click", () => navigationDrawer.open = true);
+    closeButton.addEventListener("click", () => navigationDrawer.open = false);
+  </script>
+  <div>
+  	<h2>本博客托管在GitHub Pages上（因为域名目前还未备案），使用CloudflareDNS加速</h2>
+  	<p>本站域名：awa.pw</p>
+	<p>网站使用了MDUI2框架，这种风格我是挺喜欢的</p>
+	<p>本站所有代码都是自写，不存在任何抄袭、AI生成，都是通过研究MDUI2的开发者文档编写的</p>
+  	<p>域名2024年10月20日在易名（<a href="https://ename.net/">ename.net</a>）注册</p>
+	<h2>本博客的Github仓库地址</h2>
+	<a href="https://github.com/Linyiyang930/linyiyang930.github.io" target="_blank">https://github.com/Linyiyang930/linyiyang930.github.io</a>
+	<br/><h2>站长拥有的域名：</h2>
+	<mdui-list>
+	  <mdui-list-item headline="lyyos.cn" description="2023/09/10注册" href="http://lyyos.cn" rounded></mdui-list-item>
+	  <mdui-list-item headline="xlbzi.cn" description="2024/9/25注册" href="https://xlbzi.cn" rounded></mdui-list-item>
+	  <mdui-list-item headline="awa.pw" description="2024/10/20注册" href="https://awa.pw" rounded></mdui-list-item>
+	  <mdui-list-item headline="nekoland.uk" description="2024/11/23注册" href="http://nekoland.uk" rounded></mdui-list-item>
+	</mdui-list>
+	<br/><h2>awa.pw二级域名分发</h2>
+	<p>申请邮箱：admin@awa.pw QQ号：3775610318<br/>因为技术原因，要更改DNS的记录值只能联系站长或者发邮件</p>
+	<h2>主要博客：</h2>
+	<mdui-button variant="tonal" href="https://xlbzi.cn" target="_blank">跳转到小林的个人博客</mdui-button>
+	<h2>一言：</h2>
+	<p class="hitokoto" id="yiyancon"></p> <script type="text/javascript" src="https://international.v1.hitokoto.cn?encode=js&amp;charset=utf-8&amp;&amp;c=j&amp;c=k&amp;c=l"></script>
+  </div>
+  </body>
+  <footer>
+	  <br/><mdui-divider inset></mdui-divider>
+	  <mdui-button variant="tonal" href="https://icp.gov.moe/?keyword=20240136">萌ICP备20240136号</mdui-button>
+	  <p align="center">Powered By MDUI2 | WebPage Design By Xiaolin</p>
+	  <p align="center">版权所有©2024 Xiaolin's Blog</p>
+  </footer>
+</html>
