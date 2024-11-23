@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN" class="mdui-theme-dark">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <meta name="renderer" content="webkit"/>
+    <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+    <script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+    <title>Xiaolin's Blog</title>
+  </head>
+  <body>
+    <div class="example-contained" style="position: relative; overflow: hidden">
+    <mdui-navigation-drawer modal close-on-esc close-on-overlay-click>
+    <mdui-button-icon class="close"><mdui-icon src="../../mdui-svg/close.svg"></mdui-icon></mdui-button-icon><br/>
+    <mdui-list>
+      <mdui-list-item rounded href="../index.html">首页</mdui-list-item>
+      <mdui-list-item rounded href="../word.html">文章</mdui-list-item>
+      <mdui-list-item rounded href="../friendlink.html">友情链接</mdui-list-item>
+      <mdui-list-item rounded href="../contact.html">联系我</mdui-list-item>
+    </mdui-list>
+    </mdui-navigation-drawer>
+    <div>
+      <mdui-top-app-bar>
+          	<mdui-button-icon class="open"><mdui-icon src="../../mdui-svg/menu.svg"></mdui-icon></mdui-button-icon>
+            <mdui-top-app-bar-title>Xiaolin's Blog</mdui-top-app-bar-title>
+            <div style="flex-grow: 1"></div>
+            <mdui-dropdown>
+                <mdui-button-icon slot="trigger"><mdui-icon src="../../mdui-svg/weather-sunny.svg"></mdui-icon></mdui-button-icon
+                  <mdui-menu>
+                    <mdui-menu-item href="../../text/1.html">浅色模式</mdui-menu-item>
+                    <mdui-menu-item href="1.html">深色模式</mdui-menu-item>
+                    <mdui-divider inset></mdui-divider>
+                    <mdui-menu-item href="../../auto/text/1.html">跟随系统切换</mdui-menu-item>
+                  </mdui-menu>
+              </mdui-dropdown>
+              <mdui-dropdown>
+                <mdui-button-icon slot="trigger"><mdui-icon src="../../mdui-svg/dots-vertical.svg"></mdui-icon></mdui-button-icon
+                  <mdui-menu>
+                      <mdui-card style="width: 220px;height: 220px" clickable><h3>关于此界面</h3><p>此页面全部代码由小林编写，使用了MDUI2框架，作者稍后会部署在自己的二号博客上（awa.pw）</p><mdui-button href="https://xlbzi.cn" target="_blank" variant="tonal">小林的博客</mdui-button></mdui-card>
+                    </mdui-tooltip>
+                  </mdui-menu>
+              </mdui-dropdown>
+      </mdui-top-app-bar>
+    </div>
+  </div>
+  <script>
+    const example = document.querySelector(".example-contained");
+    const navigationDrawer = example.querySelector("mdui-navigation-drawer");
+    const openButton = example.querySelector(".open");
+    const closeButton = example.querySelector(".close");
+    openButton.addEventListener("click", () => navigationDrawer.open = true);
+    closeButton.addEventListener("click", () => navigationDrawer.open = false);
+  </script>
+  <div>
+  	<h2>买下nekoland.uk</h2>
+  	<p>今天花了35元在Spaceship买了nekoland.uk，暂时还想不到有什么用，英国域名也不能备案，只能用微信支付的建议不要在Spaceship买，域名现已绑到cf上（购买商没有提供DNS服务器）</p>
+  </div>
+  </body>
+</html>
