@@ -1,1 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>外链跳转提示</title>
+<link rel="stylesheet" href="tztsui.css">
+</head>
+<body>
 
+<!-- 主页面内容 -->
+<div class="content">
+  <h1>外链跳转提示</h1>
+  <p>第三方网址可能包含未知的安全风险<br>请注意保护你的账号信息和财产安全</p>
+  <a href="#" class="external-link" data-url="https://example.com">访问外部链接</a>
+</div>
+
+<!-- 模态框（提示框） -->
+<div id="confirmModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>您即将离开当前网站并访问以下链接：</p>
+    <p id="targetUrl"></p>
+    <button id="confirmButton">确认跳转</button>
+  </div>
+</div>
+
+</body>
+</html>
